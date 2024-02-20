@@ -48,5 +48,6 @@ public class Employees {
     @JoinColumn(name = "department_id")
     private Departments departments;
 
+    @OneToMany(mappedBy = "employees", cascade = CascadeType.ALL)
     private List<Dependents> dependentsList;
 }

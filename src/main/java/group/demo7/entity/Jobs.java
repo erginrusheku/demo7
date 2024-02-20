@@ -27,6 +27,7 @@ public class Jobs {
     @Column(name = "max_salary")
     private long maxSalary;
 
+    @OneToMany(mappedBy = "jobs",cascade = CascadeType.ALL)
     private List<Employees> employees;
 
 }
