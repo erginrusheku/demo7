@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "LOCATIONS")
 public class Locations {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "location_id", nullable = false)
     private Long locationId;
 
@@ -34,6 +34,7 @@ public class Locations {
     @JoinColumn(name = "country_id")
     private Countries countries;
 
+    @OneToMany(mappedBy = "location", cascade = CascadeType.ALL)
     private List<Departments> departments;
 
 }

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Dependents {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(name = "dependent_id")
     private long dependentId;

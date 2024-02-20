@@ -12,11 +12,13 @@ import lombok.NoArgsConstructor;
 @Table(name = "DEPARTMENTS")
 public class Departments {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "department_id", nullable = false)
     private Long departmentId;
+
     @Column(name = "department_name")
     private String departmentName;
+
     @ManyToOne
     @JoinColumn(name="location_id")
     private Locations location;
