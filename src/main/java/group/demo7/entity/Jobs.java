@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -24,5 +26,7 @@ public class Jobs {
 
     @Column(name = "max_salary")
     private long maxSalary;
+
+    private List<Employees> employees;
 
 }

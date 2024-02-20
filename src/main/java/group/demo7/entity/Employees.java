@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -13,8 +14,10 @@ import java.util.Date;
 @AllArgsConstructor
 public class Employees {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "employee_id")
-    private long employeeId;
+    private Long employeeId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -33,7 +36,7 @@ public class Employees {
 
     @ManyToOne
     @JoinColumn(name = "jobs_id")
-    private long jobId;
+    private Jobs jobs;
 
     @Column(name = "salary")
     private long salary;
@@ -43,5 +46,7 @@ public class Employees {
 
     @ManyToOne
     @JoinColumn(name = "department_id")
-    private long departmentId;
+    private Departments departments;
+
+    private List<Dependents> dependentsList;
 }

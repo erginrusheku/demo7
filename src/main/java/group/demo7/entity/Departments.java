@@ -19,6 +19,6 @@ public class Departments {
     private String departmentName;
     @ManyToOne
     @JoinColumn(name="location_id")
-    private long locationId;
+    private Locations locations;
 
 }
