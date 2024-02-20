@@ -1,8 +1,11 @@
 package group.demo7.dto;
 
+import group.demo7.entity.Employees;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -15,5 +18,7 @@ public class JobsDTO {
     private long minSalary;
 
     private long maxSalary;
+
+    private List<EmployeesDTO> employees;
 
 }

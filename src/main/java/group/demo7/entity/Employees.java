@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -14,6 +15,7 @@ import java.util.Date;
 public class Employees {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "employee_id")
     private Long employeeId;
 
@@ -27,14 +29,14 @@ public class Employees {
     private String email;
 
     @Column(name = "phone_number")
-    private Long phoneNumber;
+    private long phoneNumber;
 
     @Column(name = "hire_date")
     private Date hireDate;
 
     @ManyToOne
     @JoinColumn(name = "jobs_id")
-    private Jobs jobId;
+    private Jobs jobs;
 
     @Column(name = "salary")
     private long salary;
@@ -44,5 +46,8 @@ public class Employees {
 
     @ManyToOne
     @JoinColumn(name = "department_id")
-    private Dependents departmentId;
+    private Departments departments;
+
+    @OneToMany(mappedBy = "employees", cascade = CascadeType.ALL)
+    private List<Dependents> dependentsList;
 }

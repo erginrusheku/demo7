@@ -12,8 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 public class DependentsDTO {
 
+    private Long dependentId;
     private String firstName;
     private String lastName;
     private String relationship;
-    private Employees employees;
+    private EmployeesDTO employees;
 }
