@@ -2,6 +2,7 @@ package group.demo7.dto;
 
 import group.demo7.entity.Countries;
 import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,6 @@ public class LocationsDTO {
     private String city;
 
     private String stateProvince;
-    // To be FK
+
     private Countries countryId;
 }

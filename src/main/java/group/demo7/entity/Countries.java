@@ -19,7 +19,8 @@ public class Countries {
     @Column(name = "country_name")
     private String countryName;
 
-    // To be FK
+    @ManyToOne
+    @JoinColumn(name = "region_id")
     private Regions regionId;
 
 }
