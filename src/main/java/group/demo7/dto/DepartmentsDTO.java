@@ -1,5 +1,6 @@
 package group.demo7.dto;
 
+import group.demo7.entity.Locations;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DepartmentsDTO {
 
+    private Long departmentId;
     private String departmentName;
-    private long locationId;
+    private Locations locationId;
 }
