@@ -13,8 +13,9 @@ import java.util.Date;
 @AllArgsConstructor
 public class Employees {
 
+    @Id
     @Column(name = "employee_id")
-    private long employeeId;
+    private Long employeeId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -26,14 +27,14 @@ public class Employees {
     private String email;
 
     @Column(name = "phone_number")
-    private long phoneNumber;
+    private Long phoneNumber;
 
     @Column(name = "hire_date")
     private Date hireDate;
 
     @ManyToOne
     @JoinColumn(name = "jobs_id")
-    private long jobId;
+    private Jobs jobId;
 
     @Column(name = "salary")
     private long salary;
@@ -43,5 +44,5 @@ public class Employees {
 
     @ManyToOne
     @JoinColumn(name = "department_id")
-    private long departmentId;
+    private Dependents departmentId;
 }

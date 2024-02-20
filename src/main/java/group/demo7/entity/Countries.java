@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,6 +23,10 @@ public class Countries {
 
     @ManyToOne
     @JoinColumn(name = "region_id")
-    private Regions regionId;
+    private Regions regions;
+
+    private List<Locations> locations;
+
+
 
 }

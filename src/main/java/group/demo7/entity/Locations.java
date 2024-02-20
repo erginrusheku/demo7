@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,6 +32,8 @@ public class Locations {
 
     @ManyToOne
     @JoinColumn(name = "country_id")
-    private Countries countryId;
+    private Countries countries;
+
+    private List<Departments> departments;
 
 }

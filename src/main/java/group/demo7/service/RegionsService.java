@@ -14,5 +14,5 @@ public interface RegionsService {
 
     RegionsDTO updateRegion(Long regionsId, RegionsDTO regionsDTO);
 
-    RegionsDTO deleteRegion(Long regionsId);
+    void deleteRegion(Long regionsId);
 }

@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,5 +20,7 @@ public class Regions {
 
     @Column(name = "region_name")
     private String regionName;
+
+    private List<Countries> countries;
 
 }
