@@ -42,7 +42,7 @@ public class JobsController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteJobsById(@PathVariable long jobsId){
         jobsService.deleteJobsById(jobsId);
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
     }
 

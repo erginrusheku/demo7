@@ -1,9 +1,6 @@
 package group.demo7.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,7 +32,7 @@ public class Employees {
     private Date hireDate;
 
     @ManyToOne
-    @Column(name = "jobs_id")
+    @JoinColumn(name = "jobs_id")
     private long jobId;
 
     @Column(name = "salary")
@@ -45,6 +42,6 @@ public class Employees {
     private long managerId;
 
     @ManyToOne
-    @Column(name = "department_id")
+    @JoinColumn(name = "department_id")
     private long departmentId;
 }
