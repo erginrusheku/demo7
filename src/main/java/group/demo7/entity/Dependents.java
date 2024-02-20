@@ -28,7 +28,7 @@ public class Dependents {
     private String relationship;
 
     @ManyToOne
-    @Column(name = "employee_id")
+    @JoinColumn(name = "employee_id")
     private Employees employees;
 
 
