@@ -41,6 +41,6 @@ public class LocationsController {
     @DeleteMapping("/deleteLocations/{id}")
     public ResponseEntity<Void> deleteLocations(@PathVariable Long locationId){
         locationsService.deleteLocation(locationId);
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
