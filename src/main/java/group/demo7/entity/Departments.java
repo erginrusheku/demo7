@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,7 +19,6 @@ public class Departments {
     private String departmentName;
     @ManyToOne
     @JoinColumn(name="location_id")
-    private Locations locationId;
+    private long locationId;
 
-    private List<Employees> employees;
 }

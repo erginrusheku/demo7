@@ -14,7 +14,7 @@ import java.util.Date;
 public class Employees {
 
     @Column(name = "employee_id")
-    private Long employeeId;
+    private long employeeId;
 
     @Column(name = "first_name")
     private String firstName;
