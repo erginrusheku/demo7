@@ -14,7 +14,6 @@ public class JobsServiceImpl  implements JobsService{
     @Autowired
     private JobsRepository jobsRepository;
 
-
     @Override
     public List<JobsDTO> jobs() {
         return null;

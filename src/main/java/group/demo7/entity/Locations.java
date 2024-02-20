@@ -28,7 +28,8 @@ public class Locations {
     @Column(name = "state_province")
     private String stateProvince;
 
-    // To be FK
+    @ManyToOne
+    @JoinColumn(name = "country_id")
     private Countries countryId;
 
 }

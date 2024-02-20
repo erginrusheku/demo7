@@ -1,10 +1,15 @@
 package group.demo7.service;
 
 import group.demo7.dto.EmployeesDTO;
+import group.demo7.repository.EmployeesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class EmployeesServiceImpl implements EmployeesService{
+    @Autowired
+    EmployeesRepository employeesRepository;
+
     @Override
     public List<EmployeesDTO> getAllEmployees() {
         return null;
