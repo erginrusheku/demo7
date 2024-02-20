@@ -14,11 +14,11 @@ public class Departments {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "department_id", nullable = false)
-    private long departmentId;
+    private Long departmentId;
     @Column(name = "department_name")
     private String departmentName;
     @ManyToOne
     @JoinColumn(name="location_id")
-    private Locations locations;
+    private Locations location;
 
 }
