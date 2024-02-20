@@ -43,7 +43,7 @@ public class CountriesController {
     @DeleteMapping("/deleteCountries/{id}")
     public ResponseEntity<Void> deleteCountries(@PathVariable Long countryId){
         countriesService.deleteCountry(countryId);
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 }

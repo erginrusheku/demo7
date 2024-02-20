@@ -41,6 +41,6 @@ public class RegionsController {
     @DeleteMapping("/deleteRegions/{id}")
     public ResponseEntity<Void> deleteRegions(Long regionsId){
         regionsService.deleteRegion(regionsId);
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

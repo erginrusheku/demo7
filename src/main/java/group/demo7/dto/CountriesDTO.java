@@ -12,6 +12,5 @@ public class CountriesDTO {
 
     private String countryName;
 
-    //FK
     private Regions regionId;
 }
