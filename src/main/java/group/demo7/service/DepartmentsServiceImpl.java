@@ -6,7 +6,6 @@ import group.demo7.dto.EmployeesDTO;
 import group.demo7.entity.Departments;
 import group.demo7.entity.Employees;
 import group.demo7.repository.DepartmentsRepository;
-import jakarta.persistence.Id;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
