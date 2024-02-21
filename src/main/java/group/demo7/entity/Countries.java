@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "COUNTRIES")
 public class Countries {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "country_id", nullable = false)
     private Long countryId;
 
@@ -21,6 +23,11 @@ public class Countries {
 
     @ManyToOne
     @JoinColumn(name = "region_id")
-    private Regions regionId;
+    private Regions regions;
+
+    @OneToMany(mappedBy = "countries", cascade = CascadeType.ALL)
+    private List<Locations> locations;
+
+
 
 }

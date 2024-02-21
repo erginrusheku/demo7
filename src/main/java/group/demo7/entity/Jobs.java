@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "JOBS")
 public class Jobs {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "job_id")
     private long jobId;
 
@@ -24,5 +26,8 @@ public class Jobs {
 
     @Column(name = "max_salary")
     private long maxSalary;
+
+    @OneToMany(mappedBy = "jobs",cascade = CascadeType.ALL)
+    private List<Employees> employees;
 
 }

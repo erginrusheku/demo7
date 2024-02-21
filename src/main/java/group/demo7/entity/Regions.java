@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -12,11 +14,14 @@ import lombok.NoArgsConstructor;
 @Table(name = "REGIONS")
 public class Regions {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "region_id", nullable = false)
     private Long regionId;
 
     @Column(name = "region_name")
     private String regionName;
+
+    @OneToMany(mappedBy = "regions", cascade = CascadeType.ALL)
+    private List<Countries> countries;
 
 }

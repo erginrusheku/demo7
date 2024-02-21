@@ -1,7 +1,7 @@
 package group.demo7.service;
 
 import group.demo7.dto.DepartmentsDTO;
-import group.demo7.entity.Departments;
+import group.demo7.dto.EmployeesDTO;
 
 import java.util.List;
 
