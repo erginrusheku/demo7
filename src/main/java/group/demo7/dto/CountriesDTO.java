@@ -13,6 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 public class CountriesDTO {
 
+    private Long id;
+
     private String countryName;
 
     private List<LocationsDTO> locations;

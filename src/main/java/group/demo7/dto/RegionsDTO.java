@@ -13,6 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 public class RegionsDTO {
 
+    private Long regionsId;
+
     private String regionName;
 
     private List<CountriesDTO> countries;
