@@ -6,7 +6,6 @@ import group.demo7.dto.EmployeesDTO;
 import group.demo7.entity.Departments;
 import group.demo7.entity.Employees;
 import group.demo7.repository.DepartmentsRepository;
-import jakarta.persistence.Id;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,9 +48,9 @@ public class DepartmentsServiceImpl implements DepartmentsService{
 
         List<Employees> employees = departments.getEmployees().stream().map(employeeDTO -> {
             Employees employees1 = modelMapper.map(employeeDTO, Employees.class);
-            employees1.setJobId(departments1.getDepartmentId());
+            employees1.setDepartments(departments1);
             return employees1;
-        }).toList();
+        }).collect(Collectors.toList());
 
         departments1.setEmployees(employees);
 
@@ -91,7 +90,7 @@ public class DepartmentsServiceImpl implements DepartmentsService{
                         } else {
                             // Add new employee
                             Employees newEmployee = modelMapper.map(employeesDTO, Employees.class);
-                            newEmployee.setDepartmentId(existingDepartments.getDepartmentId());
+                            newEmployee.setDepartments(existingDepartments);
                             updatedEmployees.add(newEmployee);
                         }
                     }
