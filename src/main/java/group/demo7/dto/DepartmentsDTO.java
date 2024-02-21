@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,4 +15,5 @@ public class DepartmentsDTO {
     private Long departmentId;
     private String departmentName;
     private Locations locationId;
+    private List<EmployeesDTO> employees;
 }
